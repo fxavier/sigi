@@ -1,0 +1,41 @@
+<!-- Estendemos do template base -->
+{% extends "_layouts/base.html" %}
+
+<!-- Bloco que define o <title></title> da nossa página -->
+{% block title %}Página Inicial{% endblock %}
+
+<!-- Bloco de conteúdo da nossa página -->
+{% block conteudo %}
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Cadastrar Relatorio</h5>
+          <p class="card-text">
+            Cadastre aqui um novo <code>Relatorio</code>.
+          </p>
+          <a href="{% url 'core:criar_relatorio' %}"
+             class="btn btn-primary">
+            Novo Relatorio
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Relatorios</h5>
+          <p class="card-text">
+            Veja aqui a lista de <code>Relatorios</code> cadastrados.
+          </p>
+          <a href="{% url 'core:relatorios' %}"
+             class="btn btn-primary">
+            Vá para Lista
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
